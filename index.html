@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Личная библиотека — список книг для чтения"
+    />
+    <title>Личная библиотека</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%231f5c4d%22/><path d=%22M9 7h4v18H9zm5 2h4v16h-4zm5-2h4v18h-4z%22 fill=%22white%22/></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="library">
+      <header class="library__header">
+        <div>
+          <p class="eyebrow">Домашняя коллекция</p>
+          <h1>Личная<br />библиотека</h1>
+        </div>
+
+        <div class="counter" aria-live="polite">
+          <strong id="read-count">0</strong>
+          <span>прочитано<br />из <b id="total-count">0</b></span>
+        </div>
+      </header>
+
+      <section class="panel" aria-labelledby="form-title">
+        <div class="panel__heading">
+          <span class="panel__number">01</span>
+          <div>
+            <h2 id="form-title">Добавить книгу</h2>
+            <p>Какую историю поставим на полку?</p>
+          </div>
+        </div>
+
+        <form id="book-form" class="book-form" novalidate>
+          <div class="field">
+            <label for="title">Название</label>
+            <input
+              id="title"
+              name="title"
+              type="text"
+              placeholder="Например, Мастер и Маргарита"
+              autocomplete="off"
+            />
+            <small class="field__error" id="title-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="author">Автор</label>
+            <input
+              id="author"
+              name="author"
+              type="text"
+              placeholder="Михаил Булгаков"
+              autocomplete="off"
+            />
+            <small class="field__error" id="author-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="status">Статус</label>
+            <select id="status" name="status">
+              <option value="planned">Хочу прочитать</option>
+              <option value="reading">Читаю</option>
+              <option value="finished">Прочитано</option>
+            </select>
+          </div>
+
+          <button class="button button--primary" type="submit">
+            <span>Добавить на полку</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="shelf" aria-labelledby="shelf-title">
+        <div class="shelf__top">
+          <div class="panel__heading">
+            <span class="panel__number">02</span>
+            <div>
+              <h2 id="shelf-title">Мои книги</h2>
+              <p id="filter-result">Все книги</p>
+            </div>
+          </div>
+
+          <div class="filter">
+            <label for="filter">Показать</label>
+            <select id="filter">
+              <option value="all">Все книги</option>
+              <option value="planned">Хочу прочитать</option>
+              <option value="reading">Читаю</option>
+              <option value="finished">Прочитано</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="book-list" class="book-list"></div>
+
+        <div id="empty-state" class="empty-state">
+          <span class="empty-state__icon" aria-hidden="true">⌇</span>
+          <h3>Полка пока пустует</h3>
+          <p>Добавьте первую книгу — она появится здесь.</p>
+        </div>
+      </section>
+    </main>
+
+    <template id="book-template">
+      <article class="book-card">
+        <div class="book-card__spine" aria-hidden="true"></div>
+
+        <div class="book-card__content">
+          <p class="book-card__status"></p>
+          <h3 class="book-card__title"></h3>
+          <p class="book-card__author"></p>
+
+          <div class="book-card__actions">
+            <label>
+              <span class="visually-hidden">Изменить статус книги</span>
+              <select class="book-card__select" aria-label="Изменить статус">
+                <option value="planned">Хочу прочитать</option>
+                <option value="reading">Читаю</option>
+                <option value="finished">Прочитано</option>
+              </select>
+            </label>
+
+            <button class="delete-button" type="button" aria-label="Удалить книгу">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js"></script>
+  </body>
+</html>

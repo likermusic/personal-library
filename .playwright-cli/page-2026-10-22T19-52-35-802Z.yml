@@ -1,0 +1,79 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: Домашняя коллекция
+      - heading "Личная библиотека" [level=1] [ref=e6]:
+        - text: Личная
+        - text: библиотека
+    - generic [ref=e7]:
+      - strong [ref=e8]: "2"
+      - generic [ref=e9]:
+        - text: прочитано
+        - text: из 3
+  - region "Добавить книгу" [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: "01"
+      - generic [ref=e13]:
+        - heading "Добавить книгу" [level=2] [ref=e14]
+        - paragraph [ref=e15]: Какую историю поставим на полку?
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: Название
+        - textbox "Название" [active] [ref=e19]:
+          - /placeholder: Например, Мастер и Маргарита
+      - generic [ref=e21]:
+        - generic [ref=e22]: Автор
+        - textbox "Автор" [ref=e23]:
+          - /placeholder: Михаил Булгаков
+      - generic [ref=e25]:
+        - generic [ref=e26]: Статус
+        - combobox "Статус" [ref=e27] [cursor=pointer]:
+          - option "Хочу прочитать" [selected]
+          - option "Читаю"
+          - option "Прочитано"
+      - button "Добавить на полку" [ref=e28] [cursor=pointer]:
+        - generic [ref=e29]: Добавить на полку
+        - generic [ref=e30]: →
+  - region "Мои книги" [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]: "02"
+        - generic [ref=e35]:
+          - heading "Мои книги" [level=2] [ref=e36]
+          - paragraph [ref=e37]: Прочитано · 2
+      - generic [ref=e38]:
+        - generic [ref=e39]: Показать
+        - combobox "Показать" [ref=e40] [cursor=pointer]:
+          - option "Все книги"
+          - option "Хочу прочитать"
+          - option "Читаю"
+          - option "Прочитано" [selected]
+    - generic [ref=e45]:
+      - article [ref=e163]:
+        - generic [ref=e165]:
+          - paragraph [ref=e166]: Прочитано
+          - heading "Мастер и Маргарита" [level=3] [ref=e167]
+          - paragraph [ref=e168]: Михаил Булгаков
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e171]: Изменить статус книги
+              - combobox "Изменить статус" [ref=e172] [cursor=pointer]:
+                - option "Хочу прочитать"
+                - option "Читаю"
+                - option "Прочитано" [selected]
+            - button "Удалить книгу «Мастер и Маргарита»" [ref=e173] [cursor=pointer]:
+              - img [ref=e174]
+      - article [ref=e176]:
+        - generic [ref=e178]:
+          - paragraph [ref=e179]: Прочитано
+          - heading "Маленький принц" [level=3] [ref=e180]
+          - paragraph [ref=e181]: Антуан де Сент-Экзюпери
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e184]: Изменить статус книги
+              - combobox "Изменить статус" [ref=e185] [cursor=pointer]:
+                - option "Хочу прочитать"
+                - option "Читаю"
+                - option "Прочитано" [selected]
+            - button "Удалить книгу «Маленький принц»" [ref=e186] [cursor=pointer]:
+              - img [ref=e187]

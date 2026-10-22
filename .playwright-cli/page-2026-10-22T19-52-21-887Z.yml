@@ -1,0 +1,56 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: Домашняя коллекция
+      - heading "Личная библиотека" [level=1] [ref=e6]:
+        - text: Личная
+        - text: библиотека
+    - generic [ref=e7]:
+      - strong [ref=e8]: "0"
+      - generic [ref=e9]:
+        - text: прочитано
+        - text: из 0
+  - region "Добавить книгу" [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]: "01"
+      - generic [ref=e13]:
+        - heading "Добавить книгу" [level=2] [ref=e14]
+        - paragraph [ref=e15]: Какую историю поставим на полку?
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: Название
+        - textbox "Название" [ref=e19]:
+          - /placeholder: Например, Мастер и Маргарита
+          - text: Мастер и Маргарита
+      - generic [ref=e21]:
+        - generic [ref=e22]: Автор
+        - textbox "Автор" [active] [ref=e23]:
+          - /placeholder: Михаил Булгаков
+          - text: Михаил Булгаков
+      - generic [ref=e25]:
+        - generic [ref=e26]: Статус
+        - combobox "Статус" [ref=e27] [cursor=pointer]:
+          - option "Хочу прочитать"
+          - option "Читаю" [selected]
+          - option "Прочитано"
+      - button "Добавить на полку" [ref=e28] [cursor=pointer]:
+        - generic [ref=e29]: Добавить на полку
+        - generic [ref=e30]: →
+  - region "Мои книги" [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]: "02"
+        - generic [ref=e35]:
+          - heading "Мои книги" [level=2] [ref=e36]
+          - paragraph [ref=e37]: Все книги · 0
+      - generic [ref=e38]:
+        - generic [ref=e39]: Показать
+        - combobox "Показать" [ref=e40] [cursor=pointer]:
+          - option "Все книги" [selected]
+          - option "Хочу прочитать"
+          - option "Читаю"
+          - option "Прочитано"
+    - generic [ref=e41]:
+      - generic [ref=e42]: ⌇
+      - heading "Полка пока пустует" [level=3] [ref=e43]
+      - paragraph [ref=e44]: Добавьте первую книгу — она появится здесь.
